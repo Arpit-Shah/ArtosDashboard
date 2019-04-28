@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" styleClass="card-01" stylesheets="@../styles/stylesheet.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="artos.dashboard.controllers.WarningController">
+   <children>
+      <Label alignment="CENTER" layoutX="191.0" layoutY="122.0" prefHeight="83.0" prefWidth="368.0" text="UDP PORT IS ALREADY IN USE">
+         <font>
+            <Font name="Ebrima Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="170.0" layoutY="180.0" prefHeight="83.0" prefWidth="410.0" text="Please Choose Different UDP Port">
+         <font>
+            <Font name="Ebrima Bold" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

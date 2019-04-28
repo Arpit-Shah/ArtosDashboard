@@ -1,0 +1,342 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<!-- Project Info -->
+	<name>${project.groupId}:${project.artifactId}</name>
+	<url>https://github.com/Arpit-Shah/ArtosDashboard</url>
+	<description>The Artos "ART OF SYSTEM TESTING" is a framework designed for regression, functional, integration, end to end and/or unit testing. This project is a plugin DashBoard which will help user monitor and visualise test progress</description>
+	<inceptionYear>2019</inceptionYear>
+
+	<!-- Project GAV Info -->
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.theartos</groupId>
+	<artifactId>dashboard</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<!-- Organisation Info -->
+	<organization>
+		<url>www.theartos.com</url>
+		<name>Artos</name>
+	</organization>
+
+	<!-- Licence Info -->
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+		</license>
+	</licenses>
+
+	<!-- Developer Info -->
+	<developers>
+		<developer>
+			<name>Arpit Shah</name>
+			<id>ASh</id>
+			<email>artos.framework@gmail.com</email>
+			<url>https://www.theartos.com</url>
+			<organization>Artos</organization>
+			<organizationUrl>http://www.theartos.com</organizationUrl>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+		</developer>
+		<developer>
+			<name>Shobhit Bhatnagar</name>
+			<id>SBh</id>
+			<email>artos.framework@gmail.com</email>
+			<url>https://www.theartos.com</url>
+			<organization>Artos</organization>
+			<organizationUrl>http://www.theartos.com</organizationUrl>
+			<roles>
+				<role>contributor</role>
+			</roles>
+		</developer>
+		<developer>
+			<name>Swapna Soni</name>
+			<id>SSo</id>
+			<email>artos.framework@gmail.com</email>
+			<url>https://www.theartos.com</url>
+			<organization>Artos</organization>
+			<organizationUrl>http://www.theartos.com</organizationUrl>
+			<roles>
+				<role>contributor</role>
+			</roles>
+		</developer>
+		<developer>
+			<name>Dulani Kumarage</name>
+			<id>DKu</id>
+			<email>artos.framework@gmail.com</email>
+			<url>https://www.theartos.com</url>
+			<organization>Artos</organization>
+			<organizationUrl>http://www.theartos.com</organizationUrl>
+			<roles>
+				<role>contributor</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<!-- Source Repo Info -->
+	<scm>
+		<connection>scm:git:https://github.com/Arpit-Shah/ArtosDashboard.git</connection>
+		<developerConnection>scm:git:https://github.com/Arpit-Shah/ArtosDashboard.git</developerConnection>
+		<url>https://github.com/Arpit-Shah/ArtosDashboard</url>
+	</scm>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- Enable time stamp so version file can be replaced with time stamp -->
+		<timestamp>${maven.build.timestamp}</timestamp>
+		<maven.build.timestamp.format>dd-MM-yyyy HH:mm</maven.build.timestamp.format>
+	</properties>
+
+	<!-- Distribution Model -->
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
+
+	<!-- Dependencies -->
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.10.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.10.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-cli/commons-cli -->
+		<dependency>
+			<groupId>commons-cli</groupId>
+			<artifactId>commons-cli</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+		<dependency>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>2.41.2</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/de.jensd/fontawesomefx -->
+		<dependency>
+			<groupId>de.jensd</groupId>
+			<artifactId>fontawesomefx</artifactId>
+			<version>8.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.13</version>
+		</dependency>
+	</dependencies>
+
+	<!-- Build Plugins -->
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<testSourceDirectory>${basedir}/src/test</testSourceDirectory>
+
+		<!-- Maven Compiler Plugins -->
+		<!-- parent pom overrides for compiler plugin default values and you can't 
+			fix it, you'll have to explicitely force the values in the compiler plugin 
+			configuration -->
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<!-- Nexus sonatype stagin Plugins -->
+			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.6.7</version>
+				<extensions>true</extensions>
+				<configuration>
+					<serverId>ossrh</serverId>
+					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+					<autoReleaseAfterClose>true</autoReleaseAfterClose>
+				</configuration>
+			</plugin>
+
+			<!-- Maven source tar generator Plugins -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- Maven Javadoc generator Plugins -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<additionalOptions>
+						<additionalOption>-Xdoclint:none</additionalOption>
+					</additionalOptions>
+				</configuration>
+			</plugin>
+
+			<!-- Maven gpg/signing generator Plugins -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- Due to bug in JDK 8u181 build 2 CircleCI builds were failing, https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=911925, 
+				This plugin was added as work around for that -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.1</version>
+				<configuration>
+					<!-- CircleCI build workaround -->
+					<useSystemClassLoader>false</useSystemClassLoader>
+				</configuration>
+			</plugin>
+
+			<!-- Maven Plugin to ensure all dependency are inbuilt in one jar -->
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+					<appendAssemblyId>false</appendAssemblyId>
+				</configuration>
+			</plugin>
+
+			<!-- This plugin will stop producing default jar which is without all 
+				dependency in one jar (because phase = none) , so when maven-assembly-plugin 
+				will produced jar with all inbuilt dependency, user will not get confused -->
+			<plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.0.2</version>
+				<executions>
+					<execution>
+						<id>default-jar</id>
+						<phase>none</phase>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- This plugin will copy resources (images) from com.artos.icons location 
+				to build target directory at class processing phase, so it will be packages 
+				in jar at correct location. Because we are using non standard resource directory, 
+				this has to be done. same way plugin will inject template and version file 
+				into compiled jar. When version file is processed, the variables will be 
+				replaced with project values -->
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.2</version>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/target/classes/com/artos/icons</outputDirectory>   <!-- output directory -->
+							<resources>
+								<resource>
+									<directory>${basedir}/src/com/artos/icons</directory>         <!-- source directory -->
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-resources-2</id>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/target/classes/com/artos/template</outputDirectory>   <!-- output directory -->
+							<resources>
+								<resource>
+									<directory>${basedir}/src/com/artos/template</directory>         <!-- source directory -->
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<!-- Following will update version.properites file with build number 
+						and time stamp -->
+					<execution>
+						<id>copy-resources-3</id>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/target/classes/application/version</outputDirectory>   <!-- output directory -->
+							<resources>
+								<resource>
+									<directory>${basedir}/src/application/version</directory>         <!-- source directory -->
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration version="1">
+  <suite enable="true" loopcount="1" name="Arpit">
+    <tests>
+      <test name="com.artos.tests.annotation_dataprovider.Test_IntegerAndByteArray"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_NonDataProvider"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_Static_DataProvider"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_NonStatic_DataProvider"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_DataProvider_Ignore_Case"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_ExtentReport_Child_Status"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_Single_Dimention_DataProvider"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_Exception_in_Dataprovider"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_EmptyDataProvider"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_Null_DataProvider"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Expected_Exception"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Expected_ExceptionAndMsg"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Expected_ExceptionAndMsg2"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Fail_Before_valid_Exception"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Check_Applied_If_Enforced"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Check_Ignored_If_Not_Enforced"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Fails_Test_Without_Annotation"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Pass_Works"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_More_Than_one_Exception"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Check_Ignored_If_Skip"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Check_Ignored_If_KTF"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Msg_Using_Regex_EscapeChar"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Invalid"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_RegEx_Value_Invalid"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_More_Than_one_Exception2"/>
+    </tests>
+  </suite>
+  <suite enable="true" loopcount="1" name="Shobhit">
+    <tests>
+      <test name="com.artos.tests.annotation_dataprovider.Test_IntegerAndByteArray"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_NonDataProvider"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_Static_DataProvider"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_NonStatic_DataProvider"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_DataProvider_Ignore_Case"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_ExtentReport_Child_Status"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_Single_Dimention_DataProvider"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_Exception_in_Dataprovider"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_EmptyDataProvider"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_Null_DataProvider"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Expected_Exception"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Expected_ExceptionAndMsg"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Expected_ExceptionAndMsg2"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Fail_Before_valid_Exception"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Check_Applied_If_Enforced"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Check_Ignored_If_Not_Enforced"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Fails_Test_Without_Annotation"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Pass_Works"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_More_Than_one_Exception"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Check_Ignored_If_Skip"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Check_Ignored_If_KTF"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Msg_Using_Regex_EscapeChar"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Invalid"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_RegEx_Value_Invalid"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_More_Than_one_Exception2"/>
+    </tests>
+  </suite>
+    <suite enable="true" loopcount="1" name="Swapna">
+    <tests>
+      <test name="com.artos.tests.annotation_dataprovider.Test_IntegerAndByteArray"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_NonDataProvider"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_Static_DataProvider"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_NonStatic_DataProvider"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_DataProvider_Ignore_Case"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_ExtentReport_Child_Status"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_Single_Dimention_DataProvider"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_Exception_in_Dataprovider"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_EmptyDataProvider"/>
+      <test name="com.artos.tests.annotation_dataprovider.Test_Null_DataProvider"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Expected_Exception"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Expected_ExceptionAndMsg"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Expected_ExceptionAndMsg2"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Fail_Before_valid_Exception"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Check_Applied_If_Enforced"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Check_Ignored_If_Not_Enforced"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Fails_Test_Without_Annotation"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Pass_Works"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_More_Than_one_Exception"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Check_Ignored_If_Skip"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Check_Ignored_If_KTF"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Msg_Using_Regex_EscapeChar"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_Exception_Invalid"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_RegEx_Value_Invalid"/>
+      <test name="com.artos.tests.annotation_expectedexception.Test_More_Than_one_Exception2"/>
+    </tests>
+  </suite>
+</configuration>

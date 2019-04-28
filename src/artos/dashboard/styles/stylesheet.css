@@ -1,0 +1,80 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.parent{
+	-fx-background-color: #fff;
+}
+
+/*
+ * Menu Bar
+ */
+.menu-bar-btn{
+	-fx-background-color: transparent;
+	-fx-border-color: #00a2df;
+	-fx-border-width: 0.0px 0.0px 0.0px 1.0px;
+}
+.menu-bar-btn:hover{
+	-fx-background-color: #00f2df;
+	-fx-cursor: hand;
+}
+.menu-bar-icon{
+	-fx-background-color: transparent;
+}
+
+/*
+ * Side Bar
+ * #cccccc
+ */
+.sidebar{
+	-fx-background-color: #333645;
+}
+.sidebar-user-btn{
+	-fx-background-color: #333645;
+	-fx-background-radius: 0.0px;
+	-fx-text-fill: #f8f8f8;
+}
+.sidebar-user-btn:hover{
+	-fx-background-color: #818996;
+	-fx-cursor: hand;
+}
+.sidebar-btn-icon{
+	-fx-fill: #ffffff
+}
+
+/*
+ * General
+ * 
+ */
+.card-01{
+	-fx-background-color: rgba(0.0, 162.0, 211.0, 0.3);
+}
+.card-02{
+	-fx-background-color: rgba(0.0, 162.0, 211.0, 0.4);
+}
+
+.round-box{
+	-fx-background-radius:0.0 100.0%;
+	-fx-border-radius: 100.0%;
+	-fx-border-width: 5.0px;
+}
+
+/*
+ * Combobox
+ * 
+ */
+.combobox .list-cell{
+    -fx-background-color: #cccccc;
+	-fx-background-radius: 0.0px;
+	-fx-text-fill: #f8f8f8;
+	-fx-font-size : 15.0pt;
+	-fx-border-color: #808080;
+}
+.combobox .list-cell:hover{
+    -fx-background-color: #818996;
+	-fx-cursor: hand;
+}
+.combobox .arrow-button {
+	-fx-background-color: transparent, white, transparent, white;
+}
+.combobox .arrow-button:hover{
+	-fx-background-color: transparent, #818996, transparent, #818996;
+}
+

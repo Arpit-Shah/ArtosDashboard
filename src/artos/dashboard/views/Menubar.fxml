@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.chart.*?>
+<?import de.jensd.fx.glyphs.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox fx:id="menubar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="1250.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="artos.dashboard.controllers.MenubarController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="910.0" style="-fx-background-color: #00a2d3;" stylesheets="@../styles/stylesheet.css" HBox.hgrow="ALWAYS">
+         <children>
+            <Label text="Artos Dashboard">
+               <font>
+                  <Font name="Ebrima" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/artos_icon64x64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+         <padding>
+            <Insets left="10.0" />
+         </padding></HBox>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="91.0" style="-fx-background-color: #00a2d3;" stylesheets="@../styles/stylesheet.css" HBox.hgrow="ALWAYS">
+         <children>
+            <Button fx:id="exitButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleExit" prefHeight="44.0" prefWidth="90.0" stylesheets="@../styles/stylesheet.css" text="Close">
+               <font>
+                  <Font name="Ebrima" size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="menu-bar-btn" />
+                  <String fx:value="menu-bar-icon" />
+               </styleClass>
+               <graphic>
+                  <FontAwesomeIcon iconName="TIMES" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</HBox>
