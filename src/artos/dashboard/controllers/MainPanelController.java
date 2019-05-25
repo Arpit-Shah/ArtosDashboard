@@ -30,10 +30,14 @@ import java.net.BindException;
 
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.apache.logging.log4j.core.LoggerContext;
 import org.xml.sax.SAXException;
 
 import application.exception.InvalidDataException;
 import application.infra.FWStaticStore;
+import application.infra.LogWrapper;
+import application.infra.OrganisedLog;
+import application.infra.TestContext;
 import application.interfaces.CrossTalk;
 import application.parser.FrameworkConfigParser;
 import application.parser.TestScriptParser;
@@ -57,7 +61,17 @@ public class MainPanelController {
 		provideSchema();
 		readFrameworkConfig();
 		generateRequiredDir();
+		generateRequiredFiles();
 		getTestDataBaseList();
+
+		// Create new context for each thread
+		TestContext context = new TestContext();
+		// generate logger context
+		LoggerContext loggerContext = createGlobalLoggerContext();
+		// Get logger for particular thread and set to context object
+		LogWrapper logWrapper = new LogWrapper(loggerContext, 0);
+		// store logger
+		context.setLogWrapper(logWrapper);
 
 		try {
 			// Admin Panel
@@ -142,7 +156,7 @@ public class MainPanelController {
 	}
 
 	private void readFrameworkConfig() {
-		FWStaticStore.frameworkConfig = new FrameworkConfigParser(true);
+		FWStaticStore.frameworkConfig = new FrameworkConfigParser(true, "dev");
 	}
 
 	private void provideSchema() throws IOException {
@@ -170,6 +184,58 @@ public class MainPanelController {
 				ins.close();
 			}
 		}
+	}
+
+	private void generateRequiredFiles() throws IOException {
+		if (FWStaticStore.frameworkConfig.isEnableExtentReport()) {
+			// only create Extent configuration file if not present already
+			File targetFile = new File(FWStaticStore.CONFIG_BASE_DIR + File.separator + "extent_configuration.xml");
+
+			if (!targetFile.exists() || !targetFile.isFile()) {
+
+				// create dir if not present
+				File file = new File(FWStaticStore.CONFIG_BASE_DIR);
+				if (!file.exists() || !file.isDirectory()) {
+					file.mkdirs();
+				}
+
+				InputStream ins = getClass().getResourceAsStream("/application/template/extent_configuration.xml");
+				byte[] buffer = new byte[ins.available()];
+				ins.read(buffer);
+
+				OutputStream outStream = new FileOutputStream(targetFile);
+				outStream.write(buffer);
+				outStream.flush();
+				outStream.close();
+				ins.close();
+			}
+		}
+	}
+
+	/**
+	 * Creates appenders for number of suites provided incase parallel execution is required, if test script is not provided then appenders are
+	 * created for one thread
+	 * 
+	 * @param testSuiteList list of testSuites
+	 * @return LoggetContext
+	 */
+	private LoggerContext createGlobalLoggerContext() {
+		// Create loggerContext with all possible thread appenders
+		/**
+		 * Package name can not be used for log sub-directory name in case where test cases are launched from project root directory, thus log will
+		 * come out in logging base directory.
+		 */
+		String logSubDir = "artos.dashboard";
+
+		// Get Framework configuration set by user
+		String logDirPath = FWStaticStore.frameworkConfig.getLogRootDir();
+		boolean enableLogDecoration = FWStaticStore.frameworkConfig.isEnableLogDecoration();
+		boolean enableTextLog = FWStaticStore.frameworkConfig.isEnableTextLog();
+		boolean enableHTMLLog = FWStaticStore.frameworkConfig.isEnableHTMLLog();
+
+		// Create loggerContext
+		application.infra.OrganisedLog organisedLog = new OrganisedLog(logDirPath, logSubDir, enableLogDecoration, enableTextLog, enableHTMLLog);
+		return organisedLog.getLoggerContext();
 	}
 
 }

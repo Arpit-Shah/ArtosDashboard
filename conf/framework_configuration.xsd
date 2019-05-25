@@ -8,6 +8,14 @@
       </xs:choice>
     </xs:complexType>
   </xs:element>
+  <xs:element name="logger">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="property"/>
+      </xs:sequence>
+      <xs:attribute name="profile" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="listener_config">
     <xs:complexType>
       <xs:sequence>

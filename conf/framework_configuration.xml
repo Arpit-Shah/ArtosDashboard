@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="framework_configuration.xsd">
+  <logger>
+    <!--LogLevel Options : info:debug:trace:fatal:warn:all-->
+    <property name="logLevel">debug</property>
+    <property name="logRootDir">.\reporting\</property>
+    <property name="logSubDir">SN-123</property>
+    <property name="enableLogDecoration">false</property>
+    <property name="enableTextLog">true</property>
+    <property name="enableHTMLLog">false</property>
+    <property name="enableExtentReport">true</property>
+  </logger>
   <listener_config profile="dev">
     <property name="LocalPort">11111</property>
   </listener_config>

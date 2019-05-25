@@ -38,6 +38,7 @@ public class FWStaticStore {
 	// default paths
 	public static final String DATABSE_BASE_DIR = "." + File.separator + "database" + File.separator;
 	public static final String CONFIG_BASE_DIR = "." + File.separator + "conf" + File.separator;
+	public static final String LOG_BASE_DIR = "." + File.separator + "reporting" + File.separator;
 	public static final String DATABSE_FILE = DATABSE_BASE_DIR + File.separator + TEST_DATABASE_FILENAME;
 
 	// Must be kept after default paths initialised
